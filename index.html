@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>awesome landing page</title>
+</head>
+<body>
+
+
+	<div class="container">
+
+
+		<div class="content">
+         <h3 class="control-header">🍉<span>
+</span>WayFair</h3>
+
+         <h3 class="header-2">Up to 70% Off Every Day</h3>
+
+       
+         <div class="sub-content">
+           <p>Shop every style of furniture at a discount of 70%</p>
+         <p>Exclusive sales start daily</p>	
+
+         </div>
+
+         <form action="" class="form-control" name="form1">
+         	
+         	<input type="text"  name="email" placeholder="Enter your email address">
+
+         	 <p class="error-field"></p>
+
+         	<button class="btn" >Continue</button>
+
+
+
+         </form>
+
+
+         <div class="sub-footer">
+         	<p>You can change your email at any time of preference</p>
+         	<p>Read our <span class="sub-line"><a href="#">email subsription policy</a></span></p>
+         </div>
+		   
+          			
+
+		</div>
+		
+
+	</div>
+	
+</body>
+
+<style type="text/css">
+
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body{
+	background:#333;
+}
+
+
+
+
+
+.container{
+
+	height:100vh;
+	 background-image: url("https://images.pexels.com/photos/1927314/pexels-photo-1927314.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+	 background-size: cover;
+	 background-position: center;
+	 background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+.content{
+	height:85vh;
+
+	background: #fff;
+
+	width:40vw;
+	text-align: center;
+}
+
+.control-header{
+	color:#7a276d;
+	padding: 10px;
+	margin: 10px 0;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.header-2{
+
+	color:#277a63;
+	margin: 10px 0;
+
+}
+
+.sub-content{
+	font-weight: bolder;
+	font-size:12px;
+	margin: 15px;
+}
+
+.form-control{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+input[type="text"]{
+	padding: 15px;
+	width:80%;
+	margin:5px 20px;
+	outline-style: hidden;
+	display: inline-block;
+}
+.btn{
+
+	margin:10px;
+	padding: 15px;
+	width:80%;
+
+	color:#fff;
+	background: #276f7a;
+	border:none;
+}
+
+
+.sub-footer{
+	text-align: center;
+	margin-top:20px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.sub-line{
+	text-decoration: underline;
+}
+input:focus{
+
+	outline:0;
+	box-shadow: none;
+}
+
+.error-field{
+	color:red;
+	margin:3px;
+	transition: 4s;
+}
+	
+
+.show{
+	display: none;
+}
+</style>
+
+
+<script type="text/javascript">
+
+	let form1=document.forms.form1
+
+	let error=document.querySelector(".error-field")
+	form1.addEventListener("submit",(e)=>{
+
+		e.preventDefault()
+		let root=document.forms.form1.email.value
+
+		if (root) {
+
+			console.log("success")
+
+			form1.classList.add("show")
+			// statement
+		}
+
+		error.innerText="email is required"
+		
+	})
+
+	
+    
+
+	
+	
+
+</script>
+
+
+</html>
+
+
